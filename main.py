@@ -37,7 +37,7 @@ def check_password(password):
         feedback.append("❌ Include at least one special character (!@#$%^&*).")
 
     # Strength Rating
-    if score == 4:
+    if score == 5:
         strength = "✅ Strong Password!"
     elif score == 3:
         strength = "⚠️ Moderate Password - Consider adding more security features."
@@ -60,7 +60,7 @@ def main():
         score, strength, feedback = check_password(password)
 
         # Display strength meter
-        st.subheader("Strength Assessment")
+        st.subheader("Strength")
         st.markdown(
             f"<h3>{strength} Password (Score: {score}/5)</h3>", unsafe_allow_html=True
         )
